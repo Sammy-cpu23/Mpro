@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive smartwatch Landing page</title>
+    <style>
+        /*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+body {
+            background-color: rgb(253, 255, 254);
+        }
+.header {
+    background-color: #78eb7f;
+    width: 1250px;
+    height: 100px;
+}
+.hd-brand{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(37, 37, 1);
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0 30 0;
+}
+nav ul {
+    list-style-type: disc;
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    width: fit-content;
+
+}
+nav ul li{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0 15px;
+
+}
+nav ul li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: #ff9;
+}
+.header-connect{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    font-size: 20px;
+    font-weight: 20px;
+    padding-left: 100px;
+
+}
+
+.hero {
+    background-color: aliceblue;
+    background-image: url('images/smartwach2.webp');
+    width: 1250px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    display: table;
+}
+.hero_image {
+    display: table-cell;
+    vertical-align: middle;
+}
+.hero_image  h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    font-weight: 700px;
+    line-height: 70px;
+    color: #ff9;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    
+}
+.hero_image h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 100;
+    color: rgb(232, 13, 50);
+    line-height: 40px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    
+}
+
+.feature-h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(93, 5, 5);
+    text-align: center;
+    padding: 20px;
+
+}
+
+.feature-links {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+
+}
+
+.flximg {
+    flex-basis: 300px;
+    margin: 40px;
+}
+
+.flximg img {
+    width: 100%;
+}
+
+
+h3{
+    background-color: #78eb7f;
+    display: block;
+    text-align: center;
+}
+
+
+
+footer{
+    width: calc(100% -80px);
+    padding: 40px 40px;
+    margin-top: 20px;
+    background-color: #131111;
+    overflow:hidden;
+
+
+}
+footer ul{
+    width: fit-content;
+    float: left;
+    padding-left: 20px;
+}
+footer ul li{
+    display: block;
+    list-style: none;
+    
+}
+footer ul li a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: white;
+    line-height: 80px;
+}
+.footer-links-cases{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #4204f9;
+    line-height: 80px;
+
+}
+.footer-sm{
+    width: 50px;
+    float: right;
+}
+.footer-sm img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.copy{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+@media screen and( max-width: 800px){
+    .Features{
+        min-height: 400px;
+    }
+
+    .hero{
+        flex: 100%;
+    }
+
+    .header{
+        min-height: 90px;
+    }
+
+    .Footer{
+        min-height: 110px;
+    }
+    
+
+    
+}
+
+@media screen and( max-width: 520px) {
+    .Features div{
+        flex-direction: column;
+    }
+
+    .Features {
+        min-height: 200px;
+
+    }
+
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="#" class="hd-brand">DevTech</a>
+            <nav>
+                <ul>
+                    <li> <a href="#"></a>Home</li>
+                    <li> <a href="#"></a>Features</li>
+                    <li> <a href="#"></a>Contact</li>
+                    <li></li>
+                </ul>
+            </nav>
+            <a href="connect.html" class="header-connect">Connect</a>
+         </div>
+
+         <main>
+            <section class="hero">
+                <div class="hero_image">
+                    <h2>Smartwatch web control</h2>
+                    <h1>Control your Smartwatch comfortablly on web browser</h1>
+                </div>
+            
+            </section>
+
+            <section class="features">
+                <div>
+                    <h2 class="feature-h2">Features</h2>
+                </div>
+    
+                    <section class="feature-links">
+                   
+                        <a href="#" class="flximg">
+                            <img src="images/smartwach2.webp" alt="Medi.png">
+                                <h3> Phone Call</h3>
+                    
+                        </a>
+    
+                        <a href="#" class="flximg">
+                            <img src="images/smartwatch1.webp" alt="Medi.png">
+                                <h3> Messaging</h3>
+                    
+                        </a>
+                        <a href="#" class="flximg">
+                            <img src="images/smartwach3.webp" alt="Medi.png">
+                                <h3> Sporting</h3>
+                    
+                        </a>
+    
+                        <a href="#" class="flximg">
+                            <img src="images/smartwatch4.webp" alt="Medi.png">
+                                <h3> SPO2</h3>
+                    
+                        </a>
+    
+                        <a href="#" class="flximg">
+                            <img src="images/smartwach3.webp" alt="Medi.png">
+                                <h3> Calculator</h3>
+                    
+                        </a>
+    
+                        <a href="#" class="flximg">
+                            <img src="images/smartwatch.webp" alt="Medi.png">
+                                <h3> More feature</h3>
+                    
+                        </a>        
+                  
+    
+                </div>
+
+            </section>
+         </main>
+         <footer>
+            <div class="footer-links-main">
+                <ul>
+                    <li> <a href="https://www.facebook.com/wumiajao" target="_blank"> Facebook </a> </li>
+                    <li> <a href="https://www.x.com/ajaooluwawumi" target="_blank"> Twitter </a> </li> 
+                    <li> <a href="https://www.linkedin.com/in/owawumiajao" target="_blank"> Linkdnl </a> </li>
+                   
+                </ul>
+            </div>
+
+            <div class= "footer-links-cases">
+                <ul>
+                    <li> MALING SHA - WEB DEVELOPMENT</li>
+                    <li> EXCELLINTO - WEB DEVELOPMENT</li>
+                    <li> SAMTECH - YOUTUBE CHANNEL</li>
+                    
+                </ul>
+
+            </div>
+
+            <div class="footer-sm">
+                <a href="#">
+                    <img src="images/download.png" alt="facebook logo">
+                    <img src="images/download (2).png" alt="twitter logo">
+                    <img src="images/download (5).png" alt="linkedin logo">
+    
+                </a>
+                
+            </div> 
+           
+         </footer>
+         <div class="copy">
+            <p>&copy; 2025 Smartwatch Landing Page </p>
+        </div>
+    </div>
+    
+</body>
+</html>
